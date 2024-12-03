@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100%;
+    background-color: bisque;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.nav-toggle{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+#header{
+    background: #2a1b1b;
+    position: fixed;
+    padding-block: 20px;
+    width: 100%;
+}
+
+#logo{
+    color: #fff;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+ul a{
+    font-weight: 600;
+    font-size: 17px;
+    display: inline-block;
+    color: #fff;
+    padding-block: 10px;
+    transition: 0.4s all ease;
+   
+}
+
+ul a:hover, .active{
+    color: rgba(255, 166, 0, 0.811)
+}
+
+ul li{
+    list-style: none;
+}
+
+.close-menu{
+    display: none;
+}
+
+/* To make the menu open and the menu close active */
+
+ul.active{
+    height: 220px;
+}
+
+.nav-toggle.active .open-menu{
+    display: none;
+}
+
+
+.nav-toggle.active .close-menu{
+    display: block;
+}
+
+/*For large screen*/
+@media only screen and (min-width: 900px){
+
+    .container .nav-toggle{
+        display: none;
+    }
+
+    #header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    ul{
+        all: unset;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+
+}
